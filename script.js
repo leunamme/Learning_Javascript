@@ -9,6 +9,7 @@
 05. Functions 
 06. Arrays 
 07. Loops [while / do while / for loop]
+08.	Object
 
 
 ##.	Javascript references used in this
@@ -214,7 +215,7 @@ retirement(name, year);
 
 /*
 /////////////////////////////////////////////////////
-////		ARRAYS
+////		ARRAYS 		[]
 			
 //var programmingLanguage = ['php', 'javascript', 'ruby', 'python', 'java', 'golang'];
 
@@ -266,7 +267,16 @@ var newStudents = ['ibrahim','davies','ruth','chimmeri'];
 var allStudents = students.concat(newStudents);		// joins to arrays
 console.log(allStudents);
 */
-
+/*
+			//	TWO DIMENSIONAL ARRAY //
+var students = [
+	['john','php',20],
+	['mary','javascript',22],
+	['kelvin','python',17]
+];
+console.log(students[0][1]);				//php
+console.log(students[2][0]);				//kelvin
+*/
 
 
 ////////////////////////////////////////////////////////
@@ -304,11 +314,86 @@ while (i < 10);
 
 console.log(text);
 */
+		
+/*		//	FOR LOOPS 	//
+for ( var i = 0; i < 10; i++) {
+	console.log(i);
+}
+
+var programmingLanguage = ['javascript','php','java','python','c#','c++','asp.net','Go'];
+for ( var i = 0; i < programmingLanguage.length; i++){
+	console.log(programmingLanguage[i]);
+}
+*//*
+for ( var i = 0; i <= 5; i++) {
+	console.log(i);
+
+	if ( i === 2) {
+		break;
+	}
+}
+*/
+/*
+for ( var i = 0; i <= 5; i++) {
+	if ( i === 3) {
+		break;
+	}
+	console.log(i);
+}
+*/
 
 
 
+////////////////////////////////////////////////////////////////
+///////			OBJECT 	{}
+/*
+var person = {
+	firstName: 'Emmanuel',
+	surname: 'Okeke',
+	gender: 'male',
+	country: 'Nigeria'
+};
+console.log(person.firstName);
+console.log(person['firstName']);
+console.log("My name is " + person.firstName + " " + person.surname + ".");
 
 
+var person2 = new Object();
+person2.firstName = 'Joshua';
+person2.surname = 'Okeke';
+person2['gender'] = 'male';
+person2['country'] = 'Nigeria';
+console.log(person2);
+
+
+var myStack = {
+	programmingLanguage: ['javascript','PHP']
+};
+console.log("I know " + myStack.programmingLanguage.length + " programming language: " +
+			myStack.programmingLanguage.join(', ') + ".");
+
+console.log(myStack.programmingLanguage['1']);							//array in an object
+*/
+
+
+			/// FOR IN LOOP ///
+var person = {
+	firstName: 'Emmanuel',
+	surname: 'Okeke',
+	gender: 'male',
+	country: 'Nigeria'
+};
+for (prop in person){								//prop is like a variable here.
+	console.log(prop, ': ' ,person[prop]);			
+}
+
+
+var students = [
+	{firstPerson: 'john', programmingLanguage:'php', age:22 },
+	{secondPerson: 'mary', programmingLanguage:'javascript', age:24 },
+	{thirdPerson: 'kelvin', programmingLanguage:'python', age: 19 }
+];
+console.log(students[0].firstPerson + " is " + students[0].age + " years old");
 
 
 /*
@@ -329,6 +414,7 @@ console.log(text);
 -	shift				//array
 -	join				//array
 -	concat				//array
+-	indexOf()			//array
 
 
 */
